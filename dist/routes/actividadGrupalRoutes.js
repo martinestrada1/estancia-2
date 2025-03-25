@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const ActividadGrupalController_1 = require("../controllers/ActividadGrupalController");
+const router = (0, express_1.Router)();
+const controller = new ActividadGrupalController_1.ActividadGrupalController();
+router.get('/', controller.getAll.bind(controller));
+router.get('/:id', controller.getById.bind(controller));
+router.post('/', controller.create.bind(controller));
+router.put('/:id', controller.update.bind(controller));
+router.delete('/:id', controller.delete.bind(controller));
+router.get('/:idActividad/detalles', controller.getDetalles.bind(controller));
+exports.default = router;
