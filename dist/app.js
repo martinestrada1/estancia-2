@@ -10,6 +10,10 @@ const actividadGrupalRoutes_1 = __importDefault(require("./routes/actividadGrupa
 const actividadGrupalRoutes_2 = __importDefault(require("./routes/actividadGrupalRoutes"));
 const actividadGrupalRoutes_3 = __importDefault(require("./routes/actividadGrupalRoutes"));
 const actividadGrupalRoutes_4 = __importDefault(require("./routes//actividadGrupalRoutes"));
+const actividadGrupalRoutes_5 = __importDefault(require("./routes//actividadGrupalRoutes"));
+const actividadGrupalRoutes_6 = __importDefault(require("./routes//actividadGrupalRoutes"));
+const actividadGrupalRoutes_7 = __importDefault(require("./routes//actividadGrupalRoutes"));
+const actividadGrupalRoutes_8 = __importDefault(require("./routes//actividadGrupalRoutes"));
 class App {
     constructor() {
         this.app = (0, express_1.default)();
@@ -27,6 +31,10 @@ class App {
         this.app.use('/api/asistencias', actividadGrupalRoutes_2.default);
         this.app.use('/api/permisos', actividadGrupalRoutes_3.default);
         this.app.use('/api/materias-atrasadas', actividadGrupalRoutes_4.default);
+        this.app.use('/api/FormatoPlaneacionAcademica', actividadGrupalRoutes_5.default);
+        this.app.use('/api/InformacionGeneral', actividadGrupalRoutes_6.default);
+        this.app.use('/api/UnidadAprendizaje', actividadGrupalRoutes_7.default);
+        this.app.use('/api/TemasUnidad', actividadGrupalRoutes_8.default);
         // Ruta de prueba
         this.app.get('/api/ping', (req, res) => {
             res.send('pong');

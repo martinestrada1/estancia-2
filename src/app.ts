@@ -5,7 +5,10 @@ import actividadGrupalRoutes from './routes/actividadGrupalRoutes';
 import asistenciaRoutes from './routes/actividadGrupalRoutes';
 import permisoRoutes from './routes/actividadGrupalRoutes';
 import materiaAtrasadaRoutes from './routes//actividadGrupalRoutes';
-
+import FormatoPlaneacionAcademica from './routes//actividadGrupalRoutes';
+import InformacionGeneral from './routes//actividadGrupalRoutes';
+import UnidadAprendizaje from './routes//actividadGrupalRoutes';
+import TemasUnidad from './routes//actividadGrupalRoutes';
 
 class App {
   public app: Application;
@@ -28,7 +31,10 @@ class App {
     this.app.use('/api/asistencias', asistenciaRoutes);
     this.app.use('/api/permisos', permisoRoutes);
     this.app.use('/api/materias-atrasadas', materiaAtrasadaRoutes);
-    
+    this.app.use('/api/FormatoPlaneacionAcademica', FormatoPlaneacionAcademica);
+    this.app.use('/api/InformacionGeneral', InformacionGeneral);
+    this.app.use('/api/UnidadAprendizaje', UnidadAprendizaje);
+    this.app.use('/api/TemasUnidad', TemasUnidad);
 
     // Ruta de prueba
     this.app.get('/api/ping', (req, res) => {
