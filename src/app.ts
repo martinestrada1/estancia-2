@@ -9,6 +9,12 @@ import FormatoPlaneacionAcademica from './routes//actividadGrupalRoutes';
 import InformacionGeneral from './routes//actividadGrupalRoutes';
 import UnidadAprendizaje from './routes//actividadGrupalRoutes';
 import TemasUnidad from './routes//actividadGrupalRoutes';
+import ActividadesDocentes from './routes//actividadGrupalRoutes';
+import ActividadesEstudiantes from './routes//actividadGrupalRoutes';
+import Evaluaciones from './routes//actividadGrupalRoutes';
+import MateriasAtrasadas from './routes//actividadGrupalRoutes';
+import Materias from './routes//actividadGrupalRoutes';
+
 
 class App {
   public app: Application;
@@ -35,6 +41,11 @@ class App {
     this.app.use('/api/InformacionGeneral', InformacionGeneral);
     this.app.use('/api/UnidadAprendizaje', UnidadAprendizaje);
     this.app.use('/api/TemasUnidad', TemasUnidad);
+    this.app.use('/api/ActividadesDocentes', ActividadesDocentes);
+    this.app.use('/api/Estudiantes', ActividadesEstudiantes);
+    this.app.use('/api/Evaluaciones', Evaluaciones);
+    this.app.use('/api/MateriasAtrasadas', MateriasAtrasadas);
+    this.app.use('/api/Materias', Materias);
 
     // Ruta de prueba
     this.app.get('/api/ping', (req, res) => {
